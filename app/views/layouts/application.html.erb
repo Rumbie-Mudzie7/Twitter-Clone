@@ -7,8 +7,7 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= stylesheet_link_tag "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
   <body>
   <% if flash[:notice]%>
@@ -42,22 +41,7 @@
           <p class="control">
             <%= link_to "New tweet", new_tweeet_path, class:"button is-info is-inverted"%>
           </p>
-          <% if user_signed_in? %>
-          <p class="control">
-            <%= link_to current_user.name, edit_user_registration_path, class: "button is-info"%>
-          </p>
-          <p class="control">
-            <%= link_to "Logout", destroy_user_session_path, method: :delete ,class:"button is-info"%>
-          </p>   
-
-          <% else %>
-           <p class="control">
-             <%= link_to "Sign In", new_user_session_path ,class:"button is-info"%>
-           </p>  
-           <p class="control">
-             <%= link_to "Sign up", new_user_registration_path ,class:"button is-info"%>
-           </p>  
-           <% end %>
+      
         </div>
       </div>
     </div>
