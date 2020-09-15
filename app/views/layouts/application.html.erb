@@ -11,11 +11,11 @@
 
   <body>
   <% if flash[:notice] %>
-   <div class="notification is-primary global-notification">
+   <div class="alert alert-primary mb-0 text-center">
    <p class="notice"><%= notice %></p>
   <% end %>
   <% if flash[:alert] %>
-  <div class="notification is-danger global-notification">
+  <div class="alert alert-danger mb-0 text-center">
   <p class="alert"><%= alert %></p>
   <% end %>
     <%= yield %>
